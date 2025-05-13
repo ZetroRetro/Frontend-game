@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  setup:
     runs-on: ubuntu-latest
 
     steps:
@@ -34,6 +34,5 @@ jobs:
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
       #   run: deno fmt --check
-
-      - name: Run tests
-        run: deno test -A
+      - name: Run Simple Site
+        run: deno run --allow-net main.ts
