@@ -1,5 +1,1 @@
-function greet(name: string): string {
-    return `Hello, ${name}!`;
-  }
-  
-  console.log(greet("world"));
+Deno.serve(() => new Response("Hello, world!"));
