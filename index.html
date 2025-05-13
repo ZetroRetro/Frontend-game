@@ -1,0 +1,58 @@
+<!-- Index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/officer-icon.svg" type="image/x-icon">
+    <title>Minesweeper Game</title>
+</head>
+
+<link rel="stylesheet" href="./font/fonts.css">
+<link rel="stylesheet" href="./menu.css">
+<link rel="stylesheet" href="./game.css">
+
+<body>
+    <audio id="backgroundAudio" src="./sound/game_theme.mp3" muted loop>
+        Your browser does not support the audio element.
+    </audio>
+
+    <main class="site-contents">
+        <div class="mute-button" id="muteButton"> </div>
+
+        <div class="menu" id="menu">
+            <h1 class="menu-title">Minesweeper</h1>
+
+            <div class="menu-box">
+                <div class="dropdown">
+                    <button class="dropbtn">Select Difficulty ▾</button>
+                    <ul class="dropdown-content">
+                        <input type="radio" name="difficulty_g" id="d1" checked="checked">
+                        <label for="d1">Easy (8×8 10 mines)</label>
+                        <input type="radio" name="difficulty_g" id="d2">
+                        <label for="d2">Normal (16×10 30 mines)</label>
+                        <input type="radio" name="difficulty_g" id="d3">
+                        <label for="d3">Hard (24×16 50 mines)</label>
+                        <input type="radio" name="difficulty_g" id="d4">
+                        <label for="d4">Officer (24×16 70 mines)</label>
+                    </ul>
+                </div>
+                <div id="startButton" class="menubtn">START</div>
+                <div id="guideButton" class="menubtn">How to Play</div>
+            </div>
+        </div>
+
+        <div id="game" class="game hidden">
+            <h1 class="title">Minesweeper</h1>
+
+            <table id="gameBoard" class="board"></table>
+            <div id="restartButton" class="gamebtn">RESTART</div>
+        </div>
+    </main>
+    <footer class="about">
+        footer
+    </footer>
+</body>
+<script src="./game.js"></script>
+
+</html>

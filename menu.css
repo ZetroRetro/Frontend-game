@@ -1,0 +1,218 @@
+/* Styles.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* temp borders */
+/*.site-contents {
+  border: 1px solid gold;
+}
+.menu {
+  border: 1px solid blue;
+}
+.menu-title {
+  border: 1px solid wheat;
+}
+.dropdown {
+  border: 1px solid cyan;
+}
+.game {
+  border: 1px solid green;
+}
+.about {
+  border: 1px solid yellow;
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+.site-contents {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+
+  display: grid;
+  align-items: center;
+
+  background: #f0f9e8 url(./img/please_paper.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  text-align: center;
+}
+.mute-button {
+  position: fixed;
+  top: 0;
+
+  z-index: 2;
+  width: 7vmin;
+  height: 7vmin;
+
+  margin: 5px;
+
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+
+  background-color: #00000000;
+  background-size: cover;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.sound-muted {
+  background-image: url(./img/muted.png);
+}
+.sound-unmuted {
+  background-image: url(./img/unmuted.png);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(10, 0, 0, 0.4);
+}
+.menu-title {
+  position: relative;
+
+  font-family: "No Continue Regular";
+  font-size: 8vmax;
+  color: red;
+  text-shadow: 0px 3px 0 #00000085;
+
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  width: 30vmax;
+  min-width: 60vmin;
+
+  background-color: #3b3939;
+  background: linear-gradient(to bottom right, #585555, #3b3939);
+  border: 3px solid #b1aca9;
+  box-shadow: 0px 3px 0 #8a8683;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  max-width: 60%;
+  padding: 0;
+  margin: 3vh auto;
+}
+.dropbtn,
+.menubtn {
+  font-family: "Hello AI Regular";
+  font-weight: lighter;
+  font-size: 3vmax;
+  text-align: center;
+  text-shadow: 0px 2px 0 #4838385b;
+
+  background-color: #cb0404;
+  border: 5px double #ff9f00;
+  color: #040303;
+  box-shadow: 0px 3px 0 #00000085;
+
+  width: 60%;
+  padding: 10px 20px;
+  margin: 3vh;
+  cursor: pointer;
+}
+.dropbtn {
+  width: 100%;
+  margin: 0;
+}
+
+.dropbtn:hover,
+.menubtn:hover {
+  box-shadow: 0px 0px 10px #ff9f00;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.menubtn:active {
+  box-shadow: none;
+  transition-duration: 0s;
+  transform: translateY(3px);
+}
+
+.dropdown-content {
+  display: list-item;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: #cb0404;
+  border: none;
+  box-sizing: border-box;
+
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  height: 20vh;
+  border: 2px solid #ff9f00;
+}
+
+.dropdown-content input {
+  display: none;
+}
+.dropdown-content label {
+  box-sizing: border-box;
+  width: 99%;
+  height: 5vh;
+  margin: 0 auto;
+  background: #cb0404;
+  display: block;
+  border: 2px dotted #cb0404;
+
+  font-family: "Hello AI Regular";
+  text-align: center;
+  font-size: 3vmin;
+
+  cursor: pointer;
+  color: #040303;
+}
+
+.dropdown-content input:checked + label {
+  border: 2px dotted #ff9f00;
+}
+
+.game {
+  display: flex;
+
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  position: relative;
+}
+
+.about {
+  z-index: 10;
+  background-color: #040303;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

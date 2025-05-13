@@ -1,0 +1,90 @@
+.title {
+  font-family: "No Continue Regular";
+  font-size: 5vmax;
+  color: red;
+  text-shadow: 0px 3px 0 #00000085;
+
+  position: relative;
+  top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.board {
+  display: table;
+  border-spacing: 0;
+  min-width: 80vmin;
+  min-height: 80vmin;
+  align-items: center;
+  margin: 20px;
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;;
+  
+  border: 1px solid #210606;
+
+  text-shadow: 0px 1px 0 #4838385b;
+  text-align: center;
+  align-items: center;
+  vertical-align: baseline;
+
+  font-family: "Hello AI Regular";
+  font-size: 35px;
+  /* Default color for unrevealed tiles */
+  background-color: #8a8683;
+
+  /* Default color for unrevealed tile text */
+  color: #333;
+}
+.unrevealed,
+.marked {
+  cursor: pointer;
+}
+.unrevealed:hover {
+  box-shadow: 300px 0 0 0 rgba(0, 0, 0, 0.15) inset,
+    -300px 0 0 0 rgba(0, 0, 0, 0.15) inset;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.revealed {
+  /* Color for revealed tiles */
+  background-color: #bbb;
+
+  /* Color for revealed tile text */
+  color: #000;
+}
+.marked {
+  color: #a51717;
+}
+.mine {
+  /* Color for mines */
+  background-color: #cc2222;
+}
+.gamebtn {
+  font-family: "Hello AI Regular";
+  font-weight: lighter;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 0px 2px 0 #4838385b;
+
+  background-color: #cb0404;
+  border: 5px double #ff9f00;
+  color: #040303;
+  box-shadow: 0px 3px 0 #00000085;
+
+  padding: 10px 20px;
+  margin: 1vh;
+  cursor: pointer;
+}
+.gamebtn:hover {
+  box-shadow: 0px 0px 10px #ff9f00;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.gamebtn:active {
+  box-shadow: none;
+  transition-duration: 0s;
+  transform: translateY(3px);
+}
