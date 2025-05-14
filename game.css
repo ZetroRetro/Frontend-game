@@ -12,8 +12,8 @@
 .board {
   display: table;
   border-spacing: 0;
-  min-width: 80vmin;
-  min-height: 80vmin;
+  max-width: 80vw;
+  max-height: 80vh;
   align-items: center;
   margin: 20px;
 }
